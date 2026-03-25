@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing Game</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="floating-shape"></div>
+    <div class="floating-shape"></div>
+    <div class="floating-shape"></div>
+    <div class="floating-shape"></div>
+    <div class="floating-shape"></div>
+    <div class="container">
+        <h1>🎲 Guess the Number</h1>
+        <p class="subtitle" id="subtitle">I'm thinking of a number between 1 and 100. Can you guess it?</p>
+
+        <div class="difficulty-container">
+            <select id="difficulty">
+                <option value="easy">Easy (1-50, 8 guesses)</option>
+                <option value="medium" selected>Medium (1-100, 7 guesses)</option>
+                <option value="hard">Hard (1-200, 7 guesses)</option>
+                <option value="extreme">Extreme (1-500, 8 guesses)</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <input type="number" id="guess-input" placeholder="Enter your guess...">
+            <button id="guess-btn">🎯 Guess</button>
+        </div>
+
+        <div class="message" id="message"></div>
+
+        <div class="attempts" id="attempts">Attempts: 0</div>
+
+        <button id="reset-btn">🔄 New Game</button>
+    </div>
+
+    <!-- Confetti library -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
